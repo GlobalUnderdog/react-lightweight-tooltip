@@ -112,15 +112,14 @@ export default class Tooltip extends React.Component {
         onMouseEnter={show}
         onMouseLeave={hide}
         onTouchStart={handleTouch}
-        ref="wrapper"
         style={styles.wrapper}>
         {props.children}
         {
           state.visible &&
-          <div ref="tooltip" style={styles.tooltip}>
-            <div ref="content" style={styles.content}>{props.content}</div>
-            <div ref="arrow" style={styles.arrow} />  
-            <div ref="gap" style={styles.gap} />
+          <div style={styles.tooltip}>
+            <div style={styles.content}>{props.content}</div>
+            <div style={styles.arrow} />
+            <div style={styles.gap} />
           </div>
         }
       </div>
